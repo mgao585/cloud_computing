@@ -1,1 +1,4 @@
 FROM python:latest
+RUN apt-get update; \
+    apt-get install wget; \
+    wget 'https://raw.githubusercontent.com/mschermann/forensic_accounting/master/fb_sub.csv';
