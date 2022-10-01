@@ -13,8 +13,6 @@ RUN mkdir home/$JUPYTER_USER/jupyter_notebook;\
 
 USER ${JUPYTER_USER}
 CMD jupyter notebook --ip=0.0.0.0 --port 8888
-# COPY requirements.txt requirements.txt
-# RUN pip install -r requirements.txt
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
