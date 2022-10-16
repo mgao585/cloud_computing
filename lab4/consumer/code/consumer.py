@@ -8,7 +8,7 @@ app = Flask(__name__)
 def get_meal():
    #avoid hard-code dependencies
    # response = requests.get('http://api:5000/')
-   response = requests.get('http://' + str(os.environ.get("API_HOST")) + ':' + str(os.environ.get("API_PORT")) + "/")
+   response = requests.get('http://' + str(os.environ.get("API_HOST")) + ':' + str(os.environ.get("API_PORT")) + "/" + str(os.environ.get("API_ENDPOINT")))
    response = response.content
    response = json.loads(response)
    meal = response['Meal']

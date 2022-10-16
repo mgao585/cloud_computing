@@ -1,9 +1,10 @@
 from flask import Flask, request 
 import random
 import json
+import os
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/meal_rec')
 def meal_pick():
     meals = [
     {'Meal': 'Meal A',
