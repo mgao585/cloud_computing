@@ -12,7 +12,6 @@ db_host = os.environ.get('DB_HOST')
 db_port = os.environ.get('PG_PORT') 
 
 url = f'postgresql://{db_user}:{db_pass}@{db_host}:{str(db_port)}/{db_name}'
-# url = 'postgresql://' + db_user + ':'+ db_pass + '@'+ db_host + ':' + str(db_port) + '/' + db_name
 db = create_engine(url)
 
 @app.route('/meal_rec')
